@@ -4,19 +4,15 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import org.bhawna.restfulDemo.MessangerAPI.Model.Messages;
 import org.bhawna.restfulDemo.MessangerAPI.database.Database;
 
 public class MessageService {
 	
+	private static long num=1L;
 	private static Map<Long,Messages> storeMessage = Database.getStoreMessages();
-	
-	public MessageService(){
-		storeMessage.put(10L, new Messages(4L,"Hello EveryOne","Mukesh"));
-		storeMessage.put(11L, new Messages(5L,"Hello ALL","Shilpa"));
-	}
-	
 	
 	public List<Messages> getMessages(){
 		
@@ -58,8 +54,7 @@ public class MessageService {
 	}
 	
 	public Messages addMessage(Messages messages){
-		
-		messages.setId(storeMessage.size()+1);
+		messages.setId(num++);
         storeMessage.put(messages.getId(), messages);			
 			return messages;
 		}
