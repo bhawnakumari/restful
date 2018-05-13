@@ -1,0 +1,5 @@
+package org.bhawna.restfulDemo.MessangerAPI.services;
+
+public class MessageService {
+
+}

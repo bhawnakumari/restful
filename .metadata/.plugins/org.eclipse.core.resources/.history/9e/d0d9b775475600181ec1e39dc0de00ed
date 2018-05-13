@@ -1,0 +1,40 @@
+package org.bhawna.restfulDemo.MessangerAPI.services;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.bhawna.restfulDemo.MessangerAPI.Model.Messages;
+import org.bhawna.restfulDemo.MessangerAPI.database.Database;
+
+public class MessageService {
+	
+	private Map<Long,String> storeMessage = Database.getMessage();
+	
+	public MessageService(){
+		//storeMessage.put(arg0, arg1)
+	}
+	
+	
+	public List<Messages> getMessages(){
+		
+		Messages message1 = new Messages(1L,"Hello Avinash","Bhawna");
+		Messages message2 = new Messages(2L,"Hello Bhawna","Bhawna");
+		Messages message3 = new Messages(3L,"Hello Koushik","Bhawna");
+		
+		List<Messages> messageList = new ArrayList<Messages>();
+		messageList.add(message1);
+		messageList.add(message2);
+		messageList.add(message3);
+		
+		return messageList;
+	}
+	
+	public String getMessage(Long messageID){
+	Messages message = new Messages();
+		
+		return message.getMessage();
+		
+	}
+}

@@ -1,0 +1,5 @@
+package org.bhawna.restfulWebServices.MessangerAPI.messanger.resources;
+
+public class MessageResource {
+
+}

@@ -1,0 +1,23 @@
+package org.bhawna.restfulWebServices.MessangerAPI.messanger.resources;
+
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+
+import org.bhawna.restfulDemo.MessangerAPI.services.MessageService;
+
+@Path("/messages")
+
+public class MessageResource {
+	
+	@GET
+	@Produces(MediaType.APPLICATION_XML)
+	public String getMessages(){
+		
+		MessageService messageService = new MessageService();
+		
+		return messageService.getMessages().toString();
+	}
+
+}

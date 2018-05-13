@@ -1,0 +1,54 @@
+package org.bhawna.restfulDemo.MessangerAPI.Model;
+
+import java.util.Date;
+
+import javax.xml.bind.annotation.XmlRootElement;
+
+ @XmlRootElement
+public class Messages {
+
+	private long id;
+	private String message;
+	private String author;
+	private Date dateCreated;
+	
+	public Messages (long id, String message, String author){
+		this.id=id;
+		this.message=message;
+		this.author=author;
+		this.dateCreated = new Date();
+	}
+	
+	public Messages (){
+		
+	}
+	
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getMessage() {
+		return message;
+	}
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public Date getDateCreated() {
+		return dateCreated;
+	}
+	public void setDateCreated(Date dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+	
+	
+	
+}
