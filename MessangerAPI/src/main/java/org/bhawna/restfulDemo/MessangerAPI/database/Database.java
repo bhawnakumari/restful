@@ -7,7 +7,7 @@ import org.bhawna.restfulDemo.MessangerAPI.Model.Messages;
 
 public class Database {
 	
-	private static Map<Long,Messages> storeMessages = new HashMap<>();
+	private static Map<Long,Messages> storeMessages = new HashMap<>(100);
 	
 
 	public static Map<Long, Messages> getStoreMessages() {
